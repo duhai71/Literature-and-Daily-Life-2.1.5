@@ -1,0 +1,27 @@
+{
+    "__author": "YY×君翌",
+    "version": 3,
+    "type": 0,
+    "name": "yj_nasutki_photo_frame_left",
+    "img_sit": "yj_nasutki_photo_frame_left",
+    "pose_map": {
+        "default": "0",
+        "l_default": "0"
+    },
+    "rec_layer": 2,
+    "priority": 7,
+    "acs_type": "ltable_acs",
+    "stay_on_start": true,
+    "keep_on_desk": true,
+    "select_info": {
+        "display_name": "nasutki photo frame",
+        "thumb": "yj_nasutki_photo_frame_left",
+        "group": "ltable_acs",
+        "select_dlg": [
+            "你喜欢吗？"
+        ]
+    },
+    "dlg_desc": "yj_nasutki_photo_frame_left",
+    "dlg_plural": false,
+    "giftname": "nasutki photo frame"
+}

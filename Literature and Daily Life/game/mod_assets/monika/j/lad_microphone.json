@@ -1,0 +1,19 @@
+{
+    "__author": "群阿巴阿巴&俩fish",
+    "version": 3,
+    "type": 0,
+    "name": "ladmp",
+    "img_sit": "ladmp",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+
+    },
+    "rec_layer": 2,
+    "acs_type": "table_acs",
+    "keep_on_desk": true,
+    "dlg_desc": "ladmp"
+
+}
+
+

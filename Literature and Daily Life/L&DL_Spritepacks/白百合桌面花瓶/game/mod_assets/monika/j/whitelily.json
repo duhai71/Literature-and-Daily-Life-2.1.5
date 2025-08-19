@@ -1,0 +1,27 @@
+{
+    "__author": "口香糖",
+    "version": 3,
+    "type": 0,
+    "name": "whitelily",
+    "img_sit": "whitelily",
+    "pose_map": {
+        "default": "0",
+        "l_default": "0"
+    },
+    "rec_layer": 2,
+    "priority": 7,
+    "acs_type": "table_acs",
+    "stay_on_start": true,
+    "keep_on_desk": true,
+    "select_info": {
+        "display_name": "whitelily",
+        "thumb": "whitelily",
+        "group": "table_acs",
+        "select_dlg": [
+            "白百合的花语是纯洁，永恒"
+        ]
+    },
+    "dlg_desc": "whitelily",
+    "dlg_plural": false,
+    "giftname": "whitelily"
+}

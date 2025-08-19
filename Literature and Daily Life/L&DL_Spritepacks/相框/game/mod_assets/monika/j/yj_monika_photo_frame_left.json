@@ -1,0 +1,27 @@
+{
+    "__author": "YY×君翌",
+    "version": 3,
+    "type": 0,
+    "name": "yj_monika_photo_frame_left",
+    "img_sit": "yj_monika_photo_frame_left",
+    "pose_map": {
+        "default": "0",
+        "l_default": "0"
+    },
+    "rec_layer": 2,
+    "priority": 7,
+    "acs_type": "ltable_acs",
+    "stay_on_start": true,
+    "keep_on_desk": true,
+    "select_info": {
+        "display_name": "yj_monika_photo_frame_left",
+        "thumb": "yj_monika_photo_frame_left",
+        "group": "ltable_acs",
+        "select_dlg": [
+            "just monika？"
+        ]
+    },
+    "dlg_desc": "yj_monika_photo_frame_left",
+    "dlg_plural": false,
+    "giftname": "yj_monika_photo_frame_left"
+}
