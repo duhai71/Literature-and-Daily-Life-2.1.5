@@ -84,7 +84,7 @@ label Monika_random_songs72:
         pause 4.0
         show monika 2fua zorder MAS_MONIKA_Z at t11 with dissolve_monika
         pause 186
-        stop music fadeout 3.0
+        stop music fadeout 1.0
         show monika at Transform(xpos=-800) with move
         pause 1.0
         show mas_piano at Transform(xpos=-1800, ypos=-195) with MoveTransition(4.0)
@@ -349,7 +349,7 @@ label Monika_Secret:
     m 5eua "好的,[player]."
     m 3fub "等我想想怎么弹的."
     show monika at Transform(xpos=-800) with move
-    m 2fua "想不出来了......{w=0.5}才怪."
+    m 2hua "想不出来了......{w=0.5}才怪."
     window hide
     $ store.mas_sprites.zoom_out()
     $HKBHideButtons()
@@ -363,7 +363,7 @@ label Monika_Secret:
     pause 4.0
     show monika 2fua zorder MAS_MONIKA_Z at t11 with dissolve_monika
     pause 186
-    stop music fadeout 3.0
+    stop music fadeout 1.0
     show monika at Transform(xpos=-800) with move
     pause 1.0
     show mas_piano at Transform(xpos=-1800, ypos=-195) with MoveTransition(4.0)
