@@ -52,7 +52,7 @@ label Monika_random_songs72:
         pause 4.0
         show monika 2fua zorder MAS_MONIKA_Z at t11 with dissolve_monika
         pause 114
-        stop music fadeout 3.0
+        stop music fadeout 1.0
         show monika at Transform(xpos=-800) with move
         pause 1.0
         show mas_piano at Transform(xpos=-1800, ypos=-195) with MoveTransition(4.0)
@@ -319,7 +319,7 @@ label Monika_MAICA_DCC:
     pause 4.0
     show monika 2fua zorder MAS_MONIKA_Z at t11 with dissolve_monika
     pause 114
-    stop music fadeout 3.0
+    stop music fadeout 1.0
     show monika at Transform(xpos=-800) with move
     pause 1.0
     show mas_piano at Transform(xpos=-1800, ypos=-195) with MoveTransition(4.0)
