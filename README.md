@@ -1,6 +1,6 @@
 关于Literature And Daily Life V2
 =
-![image](Literature and Daily Life/game/Submods/Literature_and_Daily_Life/L&DL_Assets/images/L&DL_logo.png)
+![image](Literature_and_Daily_Life/game/Submods/Literature_and_Daily_Life/L&DL_Assets/images/L&DL_logo.png)
 
 这是一个多人创作的项目,旨在为mas提供全新原创内容,从歌曲、新问题、到轻松有趣的主题讨论（中文）
 
