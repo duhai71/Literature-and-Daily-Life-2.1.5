@@ -1,6 +1,6 @@
 关于Literature And Daily Life V2
 =
-![image]<img width="1280" height="720" alt="暗 (1)" src="https://github.com/user-attachments/assets/cf7f68c7-5448-4888-bb02-fdfb5a46c09c" />
+<img width="1280" height="720" alt="暗 (1)" src="https://github.com/user-attachments/assets/cf7f68c7-5448-4888-bb02-fdfb5a46c09c" />
 
 这是一个多人创作的项目,旨在为mas提供全新原创内容,从歌曲、新问题、到轻松有趣的主题讨论（中文）
 
