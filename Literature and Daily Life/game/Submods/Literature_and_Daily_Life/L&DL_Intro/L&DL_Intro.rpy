@@ -111,7 +111,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="Monika_Golden_Hour_again",
             category=['音乐'],
-            prompt="我想再听你弹弹'Golden_Hour'",
+            prompt="我想再听你弹弹'Golden Hour'",
             pool=True,
             unlocked=False,
             rules={"no_unlock": None}
@@ -119,8 +119,8 @@ init 5 python:
     )
 
 label Monika_Golden_Hour_again:
-    show monika at Transform(xpos=-800) with move
     m 2fua "好的."
+    show monika at Transform(xpos=-800) with move
     window hide
     $ store.mas_sprites.zoom_out()
     $HKBHideButtons()
@@ -144,5 +144,5 @@ label Monika_Golden_Hour_again:
     $HKBShowButtons()
     window show
     play music original_music fadein 2.0
-    m 5hubfa "希望你能喜欢,[player]?"
+    m 5hubfa "希望你能喜欢,[player]."
     return
