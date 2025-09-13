@@ -650,7 +650,7 @@ label Monika_AIWFCIY_again(skip_leadin=False):
     show monika 1fublb
     call lad_show_text
     pause (2.4)
-    show monika eublb
+    show monika 2eublb
     call lad_show_text
     pause (5.233)
     show monika 1tubla
