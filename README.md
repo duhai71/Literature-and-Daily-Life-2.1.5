@@ -41,7 +41,7 @@ https://disk.monika.love/s/x9aTK
 
 3.人声歌曲是我们在submod中所作出的创新，目前看来效果还不错，在英文版发布后开启投票：下一首是中文歌曲还是英文歌曲
 
-请前往DCC投票:https://forum.monika.love/d/7575
+你可以前往DCC投票并进行V3的进度追踪:[https://forum.monika.love/d/7575](https://forum.monika.love/d/7925)
 
 ### 团队人员以及感谢名单
 团队成员(排名不分先后):
