@@ -19,7 +19,7 @@ init 5 python:
 label Monika_random_songs72:
     python:
 
-        all_songs = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        all_songs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         
         available_songs = [song for song in all_songs if song not in persistent.played_songs]
         
@@ -320,6 +320,37 @@ label Monika_random_songs72:
         m 5fublb "{b}{i}多想藏着你的好,只有我看得到~{/i}{/b}"
         $ mas_unlockEVL("Monika_you_hear_again", "EVE")
         return
+    elif random_choice == 10:
+        m 5fua "好的."
+        m 3hua "我现在想想要弹奏哪首."
+        show monika at Transform(xpos=-800) with move
+        window hide
+        $ store.mas_sprites.zoom_out()
+        $HKBHideButtons()
+        $ original_music = renpy.music.get_playing(channel='music')
+        show mas_piano at Transform(xpos=-1800, ypos=-195) zorder 13
+        show mas_piano at Transform(xpos=-5, ypos=-195) with MoveTransition(4.0)
+        pause 4.0
+        show monika at Transform(xpos=640) with move
+        play music "Submods/Literature_and_Daily_Life/L&DL_Assets/music/Shelter_piano.ogg" loop fadein 2.0
+        show monika 2hua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+        pause 4.0
+        show monika 2fua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+        pause 311
+        stop music fadeout 1.0
+        show monika at Transform(xpos=-800) with move
+        pause 1.0
+        show mas_piano at Transform(xpos=-1800, ypos=-195) with MoveTransition(4.0)
+        pause 5.0
+        show monika 2hua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+        show monika at Transform(xpos=640) with move
+        $HKBShowButtons()
+        window show
+        play music original_music fadein 2.0
+        m 5hubla "喜欢吗,[player]."
+        m 5fubfb "这首歌的名字叫Shelter,它的mv也很动人呢,我很推荐你去看看."
+        $ mas_unlockEVL("Monika_Shelter_again", "EVE")
+        return        
 #49再弹一遍
 init 5 python:
     addEvent(
@@ -725,32 +756,75 @@ init 5 python:
     )
 
 label Monika_you_hear_again:
-        m 5fua "好的."
-        m 3eua "我很高兴你想听这些."
-        show monika at Transform(xpos=-800) with move
-        m 1hublb "{b}{i}有谁能比我知道,你的温柔像羽毛~{/i}{/b}."
-        window hide
-        $ store.mas_sprites.zoom_out()
-        $HKBHideButtons()
-        $ original_music = renpy.music.get_playing(channel='music')
-        show mas_piano at Transform(xpos=-1800, ypos=-195) zorder 13
-        show mas_piano at Transform(xpos=-5, ypos=-195) with MoveTransition(4.0)
-        pause 4.0
-        show monika at Transform(xpos=640) with move
-        play music "Submods/Literature_and_Daily_Life/L&DL_Assets/music/you_hear_piano.ogg" loop fadein 2.0
-        show monika 2hua zorder MAS_MONIKA_Z at t11 with dissolve_monika
-        pause 4.0
-        show monika 2fua zorder MAS_MONIKA_Z at t11 with dissolve_monika
-        pause 229
-        stop music fadeout 1.0
-        show monika at Transform(xpos=-800) with move
-        pause 1.0
-        show mas_piano at Transform(xpos=-1800, ypos=-195) with MoveTransition(4.0)
-        pause 5.0
-        show monika 2hua zorder MAS_MONIKA_Z at t11 with dissolve_monika
-        show monika at Transform(xpos=640) with move
-        $HKBShowButtons()
-        window show
-        play music original_music fadein 2.0
-        m 5hubla "希望你会喜欢."
-        return  
+    m 5fua "好的."
+    m 3eua "我很高兴你想听这些."
+    show monika at Transform(xpos=-800) with move
+    m 1hublb "{b}{i}有谁能比我知道,你的温柔像羽毛~{/i}{/b}."
+    window hide
+    $ store.mas_sprites.zoom_out()
+    $HKBHideButtons()
+    $ original_music = renpy.music.get_playing(channel='music')
+    show mas_piano at Transform(xpos=-1800, ypos=-195) zorder 13
+    show mas_piano at Transform(xpos=-5, ypos=-195) with MoveTransition(4.0)
+    pause 4.0
+    show monika at Transform(xpos=640) with move
+    play music "Submods/Literature_and_Daily_Life/L&DL_Assets/music/you_hear_piano.ogg" loop fadein 2.0
+    show monika 2hua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+    pause 4.0
+    show monika 2fua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+    pause 229
+    stop music fadeout 1.0
+    show monika at Transform(xpos=-800) with move
+    pause 1.0
+    show mas_piano at Transform(xpos=-1800, ypos=-195) with MoveTransition(4.0)
+    pause 5.0
+    show monika 2hua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+    show monika at Transform(xpos=640) with move
+    $HKBShowButtons()
+    window show
+    play music original_music fadein 2.0
+    m 5hubla "希望你会喜欢."
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="Monika_Shelter_again",
+            category=['音乐'],
+            prompt="我想再听你弹弹'Shelter'",
+            pool=True,
+            unlocked=False,
+            rules={"no_unlock": None}
+        )
+    )
+
+label Monika_Shelter_again:
+    m 5fua "好的."
+    m 3hua "我现在去把钢琴推过来."
+    show monika at Transform(xpos=-800) with move
+    window hide
+    $ store.mas_sprites.zoom_out()
+    $HKBHideButtons()
+    $ original_music = renpy.music.get_playing(channel='music')
+    show mas_piano at Transform(xpos=-1800, ypos=-195) zorder 13
+    show mas_piano at Transform(xpos=-5, ypos=-195) with MoveTransition(4.0)
+    pause 4.0
+    show monika at Transform(xpos=640) with move
+    play music "Submods/Literature_and_Daily_Life/L&DL_Assets/music/Shelter_piano.ogg" loop fadein 2.0
+    show monika 2hua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+    pause 4.0
+    show monika 2fua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+    pause 311
+    stop music fadeout 1.0
+    show monika at Transform(xpos=-800) with move
+    pause 1.0
+    show mas_piano at Transform(xpos=-1800, ypos=-195) with MoveTransition(4.0)
+    pause 5.0
+    show monika 2hua zorder MAS_MONIKA_Z at t11 with dissolve_monika
+    show monika at Transform(xpos=640) with move
+    $HKBShowButtons()
+    window show
+    play music original_music fadein 2.0
+    m 6hubla "希望你喜欢,[player]."
+    return

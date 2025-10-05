@@ -886,7 +886,7 @@ label duhaiacyshj1:
     m 6fub "这部作品以个人成长经历为线索,既充满对童年往事的温情追忆."
     extend 1fua "又贯穿着对封建文化的深刻批判,堪称中国现代散文的典范之作."
     m 4fub "下面我和你讲讲其中的\"阿长与《山海经》\"."
-    m 5eua "对于阿长,鲁迅在开始是这么描写的."
+    m 5eua "对于其中的主要人物阿长,也就是鲁迅儿时的保姆.鲁迅在开始是这么描写的."
     m 1fud "她生得黄胖而矮...{w=1}最讨厌的是常喜欢切切察察,向人们低声絮说些什么事."
     m 2eub "通过\"睡相成'大'字\"和\"逼鲁迅吃福橘\"等等，构建粗俗可笑的初印象."
     m 5fua "但在阿长买来\"三哼经\"之后,鲁迅对于她的态度便改变了."
@@ -920,6 +920,7 @@ label duhaiwuyanyidui1111:
     m 5ltd "那些未被言说的细节更耐寻味,她何时去世?病痛中可有人照料?这些留白像极了民间丧仪上被风吹散的纸钱灰."
     m 6eub "底层人的生死,原就轻飘如草芥.但正是这般克制的书写,让阿长这个无名者,在文学史中获得了比无数达官显贵更恒久的姓名."
     m 1fua "真的好精彩,我希望在我讲完之后你能看一下这极具温情的篇章.{w=1.5}我也希望你能够珍惜身边对你好的人."
+    return
 #25
 init 5 python:
     addEvent(
@@ -2464,7 +2465,8 @@ default available_events = [
     "duhai_question_4",
     "duhai_question_5",
     "duhai_question_6",
-    "duhai_question_7"
+    "duhai_question_7",
+    "duhai_question_8"
 ]
 #57-65
 default used_events = []
@@ -2693,7 +2695,27 @@ label duhai_question_7:
             m 1fub "希望这对你有用."
     return        
 
-
+label duhai_question_8:
+    m 1hua "好的,我现在想想题目."
+    m 3tub "请问夏树喜欢做的甜点是什么呢?"
+    menu:
+        "纸杯蛋糕":
+            m 5fub "答对了哎,[player],你记的好清楚."
+            m 3eua "她的纸杯蛋糕的确美味,我忍不住多回想了一下."
+            m 6rusdla "好吧,还是不管这些了,毕竟我再也没有机会品尝这份美味了."
+        "[player]小蛋糕":
+            m 1eua "答错了哦,正确答案应该是纸杯蛋糕."
+            m 1ruc "但我觉得有些奇怪,这个选项是怎么来的呢."
+            m 5fua "毕竟夏树她不会知道你的做法的了."
+            m 3rubdla "这么说有点奇怪."
+            m 6hua "......"
+            extend 6fublb "嗯,也有可能是在表达[player]是我的小蛋糕."
+            m 5eubfa "你觉得是这样吗?"
+            m 5hubla "反正我希望是."
+        "提拉米苏":
+            m 6hua "答错了哦,[player]."
+            m 3tua "正确答案应该是纸杯蛋糕了."
+    return        
 
 
 
