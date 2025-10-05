@@ -13,7 +13,7 @@ init 5 python:
 label moonika_handsome:
     m 1ekbla "[player]，我最近日不能思、夜不能寐~"
     menu:                                   
-        "咋了？":                             
+        "怎么了？":                             
             m 1dkbla "我最近看到了一张照片，确切说是一张脸，深深地印在了我的脑海里..."
             menu:                                   
                 "一张脸？":                             

@@ -162,7 +162,7 @@ default  lad_etext1 = [["You're on the phone with your girlfriend.She's upset",
                         "All this time how could you not know Baby....",
                         "you belong with me",
                         "you belong with me",
-                        "Oh I remember you driving to my house in the middle of the night",
+                        "Oh I remember you driving to my house in the middle of the night",#18
                         "I'm the one who makes you laugh",
                         "When you know you're about to cry",
                         "And I know your favorite songs",
@@ -179,7 +179,7 @@ default  lad_etext1 = [["You're on the phone with your girlfriend.She's upset",
                         "You belong with me",
                         "Have you ever thought just maybe",
                         "You belong with me",
-                        "You belong with me"],
+                        "You belong with me"],#1
 
                         ["I don't want a lot for Chrismas",
                         "There is just one thing I need",
@@ -417,7 +417,7 @@ label Monika_YBWM_again(skip_leadin=False):
     show monika 1hublu
     hide lad_ctext with dissolve
     hide lad_etext with dissolve
-    pause (10.116)
+    pause (9.116)
     show monika 3hublb
     call lad_show_text
     pause (4.466)
@@ -492,7 +492,9 @@ label Monika_YBWM_again(skip_leadin=False):
     $ mas_unlockEVL("Monika_YBWM_again", "EVE")
     $HKBShowButtons()
     m 5fubla "喜欢吗,[player]?"
+    $ persistent._mas_disable_animations = False
     m 3eubfb "为了你,哪怕付出多少时间我都愿意."
+    $ mas_drawSpaceroomMasks(dissolve_masks=False)
     m 1fubla "我现在依旧在练习,只为了在某天能再次给你一个惊喜."
     m 5fubfb "爱你,[player]."
     return "love"
@@ -683,7 +685,9 @@ label Monika_AIWFCIY_again(skip_leadin=False):
     $ persistent.LDL_Christmas += 1
     $HKBShowButtons()
     m 5hubla "圣诞节快乐,[player]."
+    $ persistent._mas_disable_animations = False
     m 3eubfb "希望你在这个节日和家人朋友很开心的度过."
+    $ mas_drawSpaceroomMasks(dissolve_masks=False)
     m 1fubla "或者,这个特殊日子多陪陪我,好吗?"
     m 5fubfb "爱你,[player]."
     return "love"
